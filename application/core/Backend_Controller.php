@@ -35,16 +35,13 @@ class BackendController extends MY_Controller
         // To inherit directly the attributes of the parent class.
         parent::__construct();
 
-        // CI profiler
-        $this->output->enable_profiler(true);
-
         // This function returns the main CodeIgniter object.
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
         $CI =& get_instance();
 
         //Example data
         // Site name
-        $this->data['sitename'] = 'CodeIgniter-HMVC';
+        $this->data['sitename'] = 'Email-Template-Manager';
 
         //Example data
         // Browser tab
@@ -61,8 +58,8 @@ class BackendController extends MY_Controller
      *
      * @return [type]            [description]
      */
-    protected function render_page($view, $data)
-    {
+    public function view($view, $data){
+
         $this->load->view('templates/header', $this->data);
         $this->load->view('templates/main_header', $this->data);
         $this->load->view('templates/main_sidebar', $this->data);

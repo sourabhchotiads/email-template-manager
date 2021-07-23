@@ -57,6 +57,12 @@ require_once __DIR__.'/vendor/autoload.php';
  * NOTE: If you change these, also change the error_reporting() code below
  */
 
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+$base_url .= "://". @$_SERVER['HTTP_HOST'];
+$base_url .=     str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+
+defined('BASE_URL') or define('BASE_URL',$base_url);
+
 if (! defined('ENVIRONMENT')) {
     $domain = strtolower($_SERVER['HTTP_HOST']);
 

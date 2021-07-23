@@ -35,8 +35,6 @@ class FrontendController extends MY_Controller
         // To inherit directly the attributes of the parent class.
         parent::__construct();
 
-        // CI Profiler for debugging
-        $this->output->enable_profiler(true);
 
         // This function returns the main CodeIgniter object.
         // Normally, to call any of the available CodeIgniter object or pre defined library classes then you need to declare.
@@ -44,7 +42,7 @@ class FrontendController extends MY_Controller
 
         // Example data
         // Site name
-        $this->data['sitename'] = 'CodeIgniter-HMVC';
+        $this->data['sitename'] = 'Email-Template-Manager';
 
         // Example data
         // Browser tab

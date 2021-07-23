@@ -38,7 +38,23 @@ class MY_Loader extends MX_Loader
         // To inherit directly the attributes of the parent class.
         parent::__construct();
 
+        $this->data['site_title'] = ucfirst('Admin Dashboard');
+
         //
         $CI = & get_instance();
     }
+
+    // Backend controller
+    public function admin_view($view, $data = null){
+        $this->data['page_data'] = $data;
+        $this->load->view($view, $this->data);
+    }
+
+
+    // Backend controller
+    public function front_view($view, $data = null){
+        $this->data['page_data'] = $data;
+        $this->load->view($view, $this->data);
+    }
+
 }

@@ -83,3 +83,15 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// Custom Constants
+
+defined('SITE_NAME') or define('SITE_NAME','Email Template Manager');
+defined('VERSION') or define('VERSION',strtotime(date('d-m-y H:i:s')));
+
+// SMTP Detials
+defined('SMTP_HOST') or define('SMTP_HOST','mail.24livehost.com');
+defined('SMTP_USER') or define('SMTP_USER','ds21@24livehost.com');
+defined('SMTP_PASSWORD') or define('SMTP_PASSWORD','m{bj#O4jQ~ut');
+defined('SMTP_ENCRYPTION') or define('SMTP_ENCRYPTION','tls');
+defined('SMTP_PORT') or define('SMTP_PORT','587');

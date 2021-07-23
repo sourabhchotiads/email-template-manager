@@ -1,28 +1,20 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    class Dashboard extends MY_Controller
-    {
-        /**
-         * [__construct description]
-         *
-         * @method __construct
-         */
-        public function __construct()
-        {
-            // To inherit directly the attributes of the parent class.
+
+    
+    class Dashboard extends MY_Controller{
+
+        protected $data = array();
+
+        public function __construct(){
+
             parent::__construct();
         }
 
-        /**
-         * [index description]
-         *
-         * @method index
-         *
-         * @return [type] [description]
-         */
-        public function index()
-        {
-            // Example
-            $this->load->admin_view('dashboard');
+        public function index(){
+
+            $this->data['pageName'] = 'dashboard';
+
+            $this->load->admin_view('dashboard',$this->data);
         }
     }

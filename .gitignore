@@ -5,7 +5,7 @@
 !*/cache/.htaccess
 
 #codeigniter 3
-vendor
+/vendor/*
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
